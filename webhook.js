@@ -2,6 +2,8 @@ const express = require("express");
 const axios = require("axios");
 const app = express();
 app.use(express.json());
+const cors = require("cors");
+app.use(cors());
 
 const TELEGRAM_TOKEN = "7562789255:AAF6HO5J_I_CmtXIm9FGjHoue7i6lDp8d9I";
 const CHAT_ID = "-4966852373";
