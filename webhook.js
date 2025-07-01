@@ -23,7 +23,7 @@ app.post("/clic", async(req, res) => {
         });
         res.sendStatus(200);
     } catch (err) {
-        console.error("Erreur envoi Telegram:", err.response ? .data || err.message);
+        console.error("Erreur envoi Telegram:", err.response && err.response.data ? err.response.data : err.message);
         res.sendStatus(500);
     }
 });
